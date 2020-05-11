@@ -17,9 +17,9 @@ class _TabNavigatorState extends State<TabNavigator> {
   ];
   List<BottomNavigationBarItem> itemList = [];
   // 当前navigationBar的idnex
-  int _currIndex = 0;
+  int _currIndex = 1;
 
-  PageController _controller = PageController(initialPage: 0);
+  PageController _controller = PageController(initialPage: 1);
 
   @override
   void initState() {
