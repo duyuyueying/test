@@ -4,8 +4,8 @@ import 'package:flutter_zoo/http/http_manager.dart';
 var http = HttpManager();
 
 class Api {
-  static Future getHomeData() async {
-    return await http.get('http://www.devio.org/io/flutter_app/json/home_page.json');
+  static getHomeData() async {
+    return await http.get('http://qkpay.siru.com/api/assets_type?pageNum=1&pageSize=15&name=q');
   }
   static Future getSearch(Map<String, dynamic> params) async {
     return await http.get('https://m.ctrip.com/restapi/h5api/globalsearch/search?source=mobileweb&action=mobileweb&keyword=${params["keyword"]}');

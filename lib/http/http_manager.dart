@@ -17,7 +17,19 @@ class HttpManager {
     }
   }
 
-  Future get(String url, [Map<String, dynamic> params]) {
+  Future get(String url, [Map<String, dynamic> params]) async{
+    Response response;
+    try{
+      response = await _dio.get(url, queryParameters: params == null ? {} : params);
+      if(response.statusCode == 200) {
+        return response.data;
+      } else {
+        print("get error === not 200");
+      }
+      
+    } on DioError catch(e) {
+      print('get error========$e');
+    }
     return _dio.get(url, queryParameters: params == null ? {} : params);
   }
 

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoo/pages/home.dart';
 import 'package:flutter_zoo/pages/mine.dart';
-import 'package:flutter_zoo/pages/tour_team.dart';
+import 'package:flutter_zoo/pages/tourTeam/tour_team.dart';
+import 'package:flutter_zoo/pages/userCenter/user_center_page.dart';
 
 class TabNavigator extends StatefulWidget {
   @override
@@ -38,7 +39,7 @@ class _TabNavigatorState extends State<TabNavigator> {
         children: <Widget>[
           HomePage(),
           TourTeam(),
-          MinePage()
+          UserCenterPage(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
